@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Access Denied";
+}
+
+<h2>Access Denied</h2>
+
+<div class="alert alert-danger">
+    <strong>Error Code: 403</strong>
+    <p>You do not have permission to access this resource.</p>
+</div>
+
+<p>If you believe this is an error, please contact support.</p>
+
+<a href="@Url.Action("Index", "Home")" class="btn btn-primary">Return to Home</a>

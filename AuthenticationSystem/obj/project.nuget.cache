@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Zshvok6JS8gzATugYlirMiffoc5GfdM0gQ5149YWP7sQLaqTo7PZC36AYeOisjNyodOcmY6wyiwmV9ZEqdoGgQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\lenovo\\Desktop\\C__#(C SHARP)\\AuthenticationSystem\\AuthenticationSystem\\AuthenticationSystem.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lenovo\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

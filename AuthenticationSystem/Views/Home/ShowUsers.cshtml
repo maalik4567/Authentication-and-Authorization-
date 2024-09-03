@@ -1,0 +1,48 @@
+﻿
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <div class="container mt-4">
+        <h1 class="mb-4">Users List</h1>
+
+        @if (ViewBag.LoggedInUserName != null)
+        {
+            <div class="alert alert-info">
+                Logged in as: <strong>@ViewBag.LoggedInUserName</strong>
+                <form method="post" action="@Url.Action("CheckLogin", "Home")" style="display:inline;">
+                    <button type="submit" class="btn btn-danger btn-sm float-right">Logout</button>
+                </form>
+            </div>
+        }
+
+        <table class="table table-bordered mt-3">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>UserName</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in Model)
+                {
+                    <tr>
+                        <td>@user.Id</td>
+                        <td>@user.UserName</td>
+                        <td>
+                            @if (user.UserName != ViewBag.LoggedInUserName)
+                            {
+                                <form method="post" action="@Url.Action("ShowUsers", "Home")" style="display:inline;">
+                                    <input type="hidden" name="id" value="@user.Id" />
+                                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                </form>
+                            }
+                            else
+                            {
+                                <button type="button" class="btn btn-secondary btn-sm" disabled>Cannot Delete</button>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
